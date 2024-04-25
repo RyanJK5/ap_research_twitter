@@ -19,7 +19,7 @@ for lexicon in lexicons:
         if insult_list.count(word) >= 0:
             word_list.remove(word)
     query = " OR ".join(word_list)
-    query += " lang:en"
+    query = "lang:en " + query
     if lexicon == "misogyny":
         print(query)
     file = open("queries\\" + lexicon + "_query.txt", "w")
